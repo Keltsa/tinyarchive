@@ -73,6 +73,13 @@ def item_detail(request, item_id):
             template_to_render = "archive/item_photograph.html"
         elif isinstance(archive_item, Artifact):
             context["item"]["material"] = archive_item.material
+            context["item"]["dimensions"] = archive_item.dimensions
+            context["item"]["color"] = archive_item.color
+            context["item"]["function"] = archive_item.function
+            context["item"]["price"] = archive_item.price
+            context["item"]["purchase_location"] = archive_item.purchase_location
+            context["item"]["purchase_year"] = archive_item.purchase_year
+            context["item"]["sentimental_value"] = archive_item.sentimental_value
             context["item"]["3dmodel"] = archive_item.model3d
             template_to_render = "archive/item_artifact.html"
         elif isinstance(archive_item, AudioRecording):
