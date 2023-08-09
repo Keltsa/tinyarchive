@@ -28,7 +28,7 @@ h1 {
     text-align: center;
     padding: 1px 2px;
     border: 2px solid rgb(69, 69, 69);
-    margin-top: 17%;
+    margin-top: 16%;
     margin-bottom: 15%;
     margin-left: 35%;
     margin-right: 35%;
@@ -111,7 +111,16 @@ h4 {
 }
 
 h5 {
-    font-size: 16pt;
+    font-size: 14pt;
+    font-family: Arial;
+    background: linear-gradient(90deg, rgb(255, 107, 107) 0%, rgba(252,193,233,1) 59%, rgb(111, 145, 248) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 5%;
+}
+
+h6 {
+    font-size: 12pt;
     font-family: Arial;
     background: linear-gradient(90deg, rgb(206, 127, 37) 0%, rgb(176, 130, 161) 59%, rgb(197, 181, 92)100%);
     -webkit-background-clip: text;
@@ -123,4 +132,10 @@ h5 {
     position: absolute;
     z-index: -1;
     object-fit: fill;
+}
+
+.welcome {
+    font: italic small-caps bold 16px/2 cursive;
+    font-size: 14pt;
+    text-align: center;
 }
