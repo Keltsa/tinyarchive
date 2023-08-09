@@ -56,12 +56,12 @@ class Photograph(ArchiveDocument):
 
 
 class Artifact(ArchiveDocument):
-    MAT_OTHER = 'other'
-    MAT_PLASTIC = 'plastic'
-    MAT_CERAMIC = 'ceramic'
-    MAT_GLASS = 'glass'
-    MAT_METAL = 'metal'
-    MAT_PORCELAIN = 'porcelain'
+    MAT_OTHER = 'Other'
+    MAT_PLASTIC = 'Plastic'
+    MAT_CERAMIC = 'Ceramic'
+    MAT_GLASS = 'Glass'
+    MAT_METAL = 'Metal'
+    MAT_PORCELAIN = 'Porcelain'
 
     MATERIAL_CHOICES = [(MAT_OTHER, "Other"),
                         (MAT_PLASTIC, "Plastic"),
@@ -74,34 +74,22 @@ class Artifact(ArchiveDocument):
     dimensions = models.CharField(max_length=200, blank="True")
     color = models.CharField(max_length=200, blank="True")
     
-    FUNC_ENT = 'entertainment'
-    FUNC_ECON = 'economics'
-    FUNC_COM = 'communication'
-    FUNC_OTHER = 'other'
+    FUNC_ENT = 'Entertainment'
+    FUNC_FIN = 'Finances'
+    FUNC_COM = 'Communication'
+    FUNC_OTHER = 'Other'
 
     FUNCTION_CHOICES = [(FUNC_ENT, "Entertainment"),
-                        (FUNC_ECON, "Economics"),
+                        (FUNC_FIN, "Finances"),
                         (FUNC_COM, "Communication"),
                         (FUNC_OTHER, "Other")]
     function = models.CharField(
         max_length=50, choices=FUNCTION_CHOICES, default=FUNC_ENT)
     production_company = models.CharField(max_length=500, blank="True")
-    
-    PRICE_LOW = "<$50"
-    PRICE_LOWMID = "$50-$100"
-    PRICE_MID = "$101-$150"
-    PRICE_MIDHIGH = "$151-$200"
-    PRICE_HIGH = ">$201"
-    
-    PRICE_CHOICES = [(PRICE_LOW, "<$50"),
-                     (PRICE_LOWMID, "$50-$100"),
-                     (PRICE_MID, "$101-$150"),
-                     (PRICE_MIDHIGH, "$151-$200"),
-                     (PRICE_HIGH, ">$201")]
-    price = models.CharField(
-        max_length=50, choices=PRICE_CHOICES, default=PRICE_LOW)
+    price = models.CharField(max_length=200, blank="True")
     purchase_location = models.CharField(max_length = 500, blank="True")
 
+    YEAR_90 = "1990"
     YEAR_0 = "2000"
     YEAR_1 = "2001"
     YEAR_2 = "2002"
@@ -127,7 +115,7 @@ class Artifact(ArchiveDocument):
     YEAR_22 = "2022"
     YEAR_23 = "2023"
     
-    YEAR_CHOICES = [(YEAR_0, "2000"), (YEAR_1, "2001"), (YEAR_2, "2002"), (YEAR_3, "2003"),
+    YEAR_CHOICES = [(YEAR_90, "1990"), (YEAR_0, "2000"), (YEAR_1, "2001"), (YEAR_2, "2002"), (YEAR_3, "2003"),
                     (YEAR_4, "2004"), (YEAR_5, "2005"), (YEAR_6, "2006"), (YEAR_7, "2007"),
                     (YEAR_8, "2008"), (YEAR_9, "2009"), (YEAR_10, "2010"), (YEAR_11, "2011"),
                     (YEAR_12, "2012"), (YEAR_13, "2013"), (YEAR_14, "2014"), (YEAR_15, "2015"),

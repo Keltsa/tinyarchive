@@ -1,13 +1,23 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/style.css"/>
+   <title> About Childhood Project </title>
 </head>
-<body>
-    <h1>
-        This is an about page. We can write down our info on it!
-    </h1>
-</body>
+<div class="page_title1">
+    <h4> About Childhood Project </h4>
+    <h5>Acknowledgement:</h5>
+    <h5>Group Members: Kelly Tsai, Sunny Hsu, Yiran Li, Meixin Ma, Peter Chen</h5>
+    <h5>Professor: Kea Johnston</h5>
+    <h5>Class: DIGHUM 150A</h5>
+    <h5>Date: 8/9/2023</h5>
+</div>
+<div class="intro">
+    On this website, we digitize items that we often saw in our childhoods (being around the early 2000s) that were once very prevalent, but are rarely seen or have become obsolete in the current age. These items include a piggy bank, landline phone, Wii, Radio, and a DS. With the collection of items chosen, they cover a fairly considerable range in fields and uses, from finances to communication to entertainment. However, they have all become less seen due to the quickly evolving nature of technology. Although technological advancements have been made all throughout history, even within the past couple of decades, we have seen the rise and fall of certain items and trends while growing up. 
+</div>
 </html>
+{% endblock %}
