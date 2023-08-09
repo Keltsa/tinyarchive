@@ -139,3 +139,7 @@ h6 {
     font-size: 14pt;
     text-align: center;
 }
+
+.about_back {
+    background-color: rgb(254, 255, 240);
+}
